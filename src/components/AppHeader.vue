@@ -4,14 +4,6 @@ export default {
     props: {
         headerTitle: String,
     },
-    methods: {
-        hiddenHeader:
-        setTimeout(() => {
-            
-        }, 2000),
-
-    },
-
 }
 </script>
 

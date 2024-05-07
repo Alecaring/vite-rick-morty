@@ -46,15 +46,15 @@ export default {
 <template>
   <div class="container">
     <div v-if="loading" class="containerLoader">
-      <div class="loader">
-        <h1></h1>
+      <div class="contInnerLoader">
+        <div class="loader"></div>
+        <h1>Rick And Morty</h1>
       </div>
 
     </div>
 
 
-    <AppHeader
-      :headerTitle="headerTitle" />
+    <AppHeader :class="loading === true ? 'none' : 'block'" :headerTitle="headerTitle" />
     <AppMain :myaArray="myArray" />
 
 
@@ -65,14 +65,27 @@ export default {
 .containerLoader {
   width: 100%;
   height: 100vh;
-  background-color: #ffffff;
+  background-color: #f2d9d9;
   display: flex;
   justify-content: center;
   align-items: center;
   opacity: 1;
   /* Imposta opacità iniziale piena */
   transition: opacity 0.5s ease-out;
+
   /* Aggiunge una transizione di opacità */
+  .contInnerLoader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    h1 {
+      padding: 2rem;
+      color: #c85e5e;
+      font-size: 5vw;
+    }
+  }
 }
 
 /* HTML: <div class="loader"></div> */
@@ -104,5 +117,13 @@ export default {
   80% {
     background-position: 0% 50%, 50% 50%, 100% 100%
   }
+}
+
+.none {
+  display: none;
+}
+
+.block {
+  display: block;
 }
 </style>
