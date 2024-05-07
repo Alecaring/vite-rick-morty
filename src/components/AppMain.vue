@@ -26,6 +26,9 @@ export default {
     align-items: center;
     flex-wrap: wrap;
     gap: 5vw;
-    width: 100%;
+    width: 90%;
+    padding: 1vw 0 5vw;
+    margin: 0 auto;
 }
+
 </style>

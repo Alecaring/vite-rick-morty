@@ -6,9 +6,11 @@ export default {
         AppFilterSelection,
     },
 
-    data() { return {
+    data() {
+        return {
             store,
-        }},
+        }
+    },
 }
 </script>
 
@@ -17,20 +19,21 @@ export default {
         <nav class="nav">
             <h1>{{ store.headerTitle }}</h1>
         </nav>
-        <AppFilterSelection />
     </div>
 </template>
 
-<style lang="scss" scoped>
-
-
+<style lang="scss" scoped >
 .nav {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 3vw;
+    padding: 5vw 0 3vw;
     font-size: 3vw;
-}
+    letter-spacing: 4px;
 
+    @media screen and (max-width: 425px) {
+        background-color: white;
+    }
+}
 </style>

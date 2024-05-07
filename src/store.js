@@ -4,6 +4,5 @@ export const store = reactive ({
     loading: false,
     
     headerTitle: "Rick And Morty App",
-    selected: "All",
-    selectedArr: ["All", "Alive", "Dead", "Unknown"],
+    selectedStatus: "All",
 });

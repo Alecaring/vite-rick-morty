@@ -2,9 +2,11 @@
 import { store } from '../store';
 export default {
 
-    data() { return {
+    data() {
+        return {
             store,
-        }},
+        }
+    },
 }
 </script>
 
@@ -35,22 +37,47 @@ export default {
 
     .cardInnerContainer {
         width: calc(100% / 4 - 5vw);
-        height: 50vh;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
 
+        @media screen and (max-width: 768px) {
+            width: calc(100% / 3 - 5vw);
+        }
+
+        @media screen and (max-width: 425px) {
+            width: calc(100% / 1 - 5vw);
+
+        }
+
+
         .contImg {
+            position: relative;
             width: 20vw;
             height: 20vw;
             border-radius: 50%;
             overflow: hidden;
-            box-shadow: 0px 0px 13px 0px rgba(255, 0, 0, 0.351);
+            box-shadow: inset 0px 0px 13px 0px rgba(255, 0, 0, 0.652);
+
+            @media screen and (max-width: 425px) {
+                width: 60vw;
+                height: 60vw;
+            }
 
             img {
-                width: 100%;
-                height: 100%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                border-radius: 50%;
+                width: 19vw;
+                height: 19vw;
+
+                @media screen and (max-width: 425px) {
+                    width: 59vw;
+                    height: 59vw;
+                }
             }
         }
 
@@ -61,8 +88,15 @@ export default {
             flex-direction: column;
             text-align: center;
 
+
             h2 {
                 padding: 0 0 1vw;
+                font-size: 2vw;
+
+                @media screen and (max-width: 425px) {
+                    font-size: 7vw;
+                    padding: 3vw 0 0;
+                }
             }
         }
     }
