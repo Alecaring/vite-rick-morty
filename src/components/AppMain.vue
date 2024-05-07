@@ -1,13 +1,12 @@
 <script>
+
 import AppCards from './AppCards.vue';
 
 export default {
-    props: {
-    myaArray: Array,
-  },
-    components: {
-    AppCards
-},
+    components: { AppCards, },
+    data() { return {
+            
+        }},
 
 }
 </script>
@@ -15,7 +14,7 @@ export default {
 <template>
     <div>
         <div class="containerCards">
-            <AppCards :myArray="myaArray" />
+            <AppCards />
         </div>
     </div>
 </template>

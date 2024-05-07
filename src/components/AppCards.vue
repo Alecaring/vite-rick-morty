@@ -1,16 +1,15 @@
 <script>
+import { store } from '../store';
 export default {
 
-
-    props: {
-        myArray: Array,
-    },
-
+    data() { return {
+            store,
+        }},
 }
 </script>
 
 <template>
-    <div class="cardInnerContainer" v-for="card in myArray">
+    <div class="cardInnerContainer" v-for="card in store.ElemArray">
 
         <div class="contImg">
             <img :src="card.image" alt="">

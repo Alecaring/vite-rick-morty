@@ -1,17 +1,23 @@
 <script>
+import { store } from "../store";
+import AppFilterSelection from "./AppFilterSelection.vue"
 export default {
-
-    props: {
-        headerTitle: String,
+    components: {
+        AppFilterSelection,
     },
+
+    data() { return {
+            store,
+        }},
 }
 </script>
 
 <template>
     <div>
         <nav class="nav">
-            <h1>{{ headerTitle }}</h1>
+            <h1>{{ store.headerTitle }}</h1>
         </nav>
+        <AppFilterSelection />
     </div>
 </template>
 
